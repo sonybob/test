@@ -1,3 +1,4 @@
+"use strict";
 // let bot = prompt("Скільки буде 7 + або -15");
 // switch (true) {
 //     case Number(bot) === -8:
@@ -410,4 +411,198 @@
 // console.log(newUsers);
 //______________________________________________________________________________________________________________________________
 
+// const wallet = {
+//     balance: 0,
+//     operations: [],
+
+//     positivBalance: function (price, reason) {
+//         this.operations.push({
+//             operationNum: this.operations.length + 1,
+//             sum: price,
+//             reason: reason,
+//         });
+//         this.balance += price;
+//     },
+
+//     negativeBalance: function (price, reason) {
+//         if (this.balance > price) {
+//             this.operations.push({
+//                 operationNum: this.operations.length + 1,
+
+//                 sum: -price,
+//                 reason: reason,
+//             });
+//             this.balance -= price;
+//         } else {
+//             console.log("no money");
+//         }
+//     },
+// };
+
+// wallet.positivBalance(500, "Balance +");
+// wallet.negativeBalance(400, "Balance -");
+// // wallet.negativeBalance(200, "Balance -");
+// //console.log(wallet);
+// //______________________________________________________________________________________________________________________________
+
+// const warehouse = {
+//     goods: [],
+//     findGoodsById: function (goodid) {
+//         return this.goods.find((el) => el.id === goodid);
+//     },
+//     addGood: function (good) {
+//         if (this.findGoodsById(good.id)) {
+//             console.log(" id exist");
+//         } else {
+//             this.goods.push(good);
+//         }
+//     },
+
+//     getWeightKG: function () {
+//         return this.goods.reduce(
+//             (acc, value) => (acc += value.weigth?.kg ? value.weigth.kg : 0),
+//             0
+//         );
+//     },
+// };
+
+// const car = {
+//     id: 1,
+//     weigth: {
+//         kg: 1000,
+//     },
+//     brand: "ford",
+// };
+
+// const chair = {
+//     id: 2,
+//     weigth: {
+//         kg: 2,
+//     },
+// };
+
+// const paper = {
+//     id: 3,
+//     color: "red",
+// };
+// const table = {
+//     id: 1,
+//     weigth: {
+//         kg: 200,
+//     },
+//     color: "white",
+// };
+
+// warehouse.addGood(car);
+// warehouse.addGood(chair);
+// warehouse.addGood(paper);
+// warehouse.addGood(table);
+
+// console.log(warehouse.getWeightKG());
+
+// console.log(warehouse.findGoodsById(1));
+
+// console.log(warehouse);
+//______________________________________________________________________________________________________________________________this
+
+// const company = {
+//     name: "OOO AGRO",
+
+//     employees: [
+//         {
+//             name: "Sveta",
+
+//             getEmplo: function () {
+//                 return this.name;
+//             },
+//         },
+//     ],
+//     ceo: {
+//         name: "Ivan",
+
+//         getCeo: function () {
+//             return this.name;
+//         },
+//     },
+
+//     getCompany: function () {
+//         return this.name;
+//     },
+// };
+
+// console.log(company.getCompany());
+// console.log(company.ceo.getCeo());
+// console.log(company.employees.map((el) => el.getEmplo()));
+//______________________________________________________________________________________________________________________________ blind_/ call /apply
+
+// function removePassword(reset) {
+//     if (reset) {
+//         this.password = undefined;
+//     } else {
+//         this.password = "1";
+//     }
+// }
+
+// const user = {
+//     name: "login",
+//     password: "12345"
+// }
+
+
+// const userResetPassbind = removePassword.bind(user, true)
+// // const userResetPassCall = removePassword.call(user, true);
+// userResetPassbind();
+// console.log(user);
+//______________________________________________________________________________________________________________________________ Замикання
+
+// function user() {
+//     const userObj = {
+
+//         balance: 0,
+//         operations: 0,
+
+//         increse(sum) {
+//             this.balance += sum;
+//             this.operations++;
+//         }
+//     };
+//     return function () {
+//         return userObj;
+//     }
+// }
+// const user1 = user();
+// user1().increse(100);
+// user1().increse(100);
+// console.log(user1());
+
+// const user2 = user();
+// user2().increse(500);
+// console.log(user2());
+//______________________________________________________________________________________________________________________________ Замикання
+
+// function sum(num) {
+//     let balance = 0;
+//     return function () {
+//         return balance += num;
+//     }
+// }
+// const sum2 = sum(100);
+// sum2(200);
+// console.log(sum2());
+// const sum3 = sum(500);
+// console.log(sum3());
+//______________________________________________________________________________________________________________________________ Замикання
+
+// function cou() {
+//     let count = 0;
+//     return function () {
+//         return count++;
+//     }
+// }
+// const count1 = cou();
+// count1();
+// count1();
+
+// console.log(count1());
+//______________________________________________________________________________________________________________________________ Замикання
 
